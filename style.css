@@ -1,0 +1,254 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: block;
+	/* This is the pattern you see in the background */
+	background-image: url("images/background.jpg");
+	/* This is the plane cursor that you see */
+	cursor: url('images/yellowheart.png'), auto;
+}
+
+/* This determines the font size (relative to viewport/window size) for the main title */
+.header{
+	font-size: 5.5vw;
+}
+
+/* This determines the font size (relative to viewport/window size) for the subheader */
+.underheader{
+	font-size: 2vw;
+}
+
+/* This creates the title that you see on the top */
+.title {
+	width: 100%;
+	height: 40%;
+	display: flex;
+	text-align: center;
+	vertical-align: center;
+}
+
+/* This creates a small div inside the title div to make it took organized */
+.titletxt{
+	display: block;
+	font-family: penelope;
+	color: white;
+}
+
+.subtitle{
+	font-family: coolvetica;
+}
+
+/* This link the font face for the image caption in the page */
+@font-face {
+  font-family: coolvetica;
+  src: url(fonts/coolvetica.otf);
+}
+
+/* This links the font for the title to the page */
+@font-face {
+  font-family: penelope;
+  src: url(fonts/Penelope.otf);
+}
+
+@font-face {
+  font-family: dollie;
+  src: url(fonts/dollie.ttf);
+}
+
+
+/* This creates the rows, and make it big enough to make the website scrolling */
+.bodyrow {
+	width: 100%;
+	height: calc(60%/2);
+	display: flex;
+}
+
+/* This creates the small rows that lay out the space for the images */
+.city {
+	width: calc(100%/3);
+	height: 100%;
+	display: flex;	
+}
+
+/* This determines the font size (relative to viewport/window size) for the main title */
+.imgtxt {
+  font-family: dollie;
+  font-size: 4vh;
+  opacity: 1;
+
+}
+
+/* This makes the image aption visible when you hover over it */
+.imgtxt:hover {
+  visibility: visible;
+  
+}
+
+/* Colors used */
+.testwhite {background-color: rgba(255, 255, 255, 0.9);}
+.red {background-color: #910101;}
+.yellow {background-color: #f8df55;}
+.green {background-color: #115740;}
+
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+/* If you're using 'display: flex' this class can be used to easily center horizontally! */
+.center-horizontal {
+	align-items: center;	
+}
+
+/* If you're using 'display: flex' this class can be used to easily center vertically! */
+.center-vertical {
+	justify-content: center;
+}
+
+
+
+/* Keep your image from overflowing it's parent DIV */
+.contain-image {
+	max-height: 95%;
+	max-width: 95%;
+}
+
+/* Smaller div created to  establish features that only effect the image and not the city div */
+.square {
+  position: relative;
+  width: 50%;
+  display: flex
+}
+
+.square:after {
+  content: "";
+  display: flex;
+  padding-bottom: 100%;
+}
+
+/* Contains image in square div */
+.content {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Changes color of div upon hover */
+.content:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Makes image pop up when hovered over */
+.zoom {
+	transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/* Creates border around image */
+img {
+	  border-style: solid;
+	  border-width: 5px;
+	  border-color: white;
+}
+
+/* Makes image opaque when hovered over */
+img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+
+/* Changes css layout for mobile phones */
+@media only screen and (max-width: 800px) {
+	
+	body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		display: block;
+	}
+	
+	/* This determines the font size (relative to viewport/window size) for the main title */
+	.header{
+		font-size: 8vw;
+	}
+	
+	/* This determines the font size (relative to viewport/window size) for the subheader */
+	.underheader{
+		font-size: 3vw;
+	}
+
+	/* This creates the rows, and make it big enough to make the website scrolling */
+	.bodyrow {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	
+	/* This creates the small rows that lay out the space for the images */
+	.city {
+		width: 100%;
+		height: calc((100%/3));
+		display: flex;	
+	}
+
+	/* Smaller div created to  establish features that only effect the image and not the city div */
+	.square {
+	  max-height: 95%;
+	  max-width: 95%;	
+	  width: 50%;
+	  display: flex
+	}
+
+	.square:after {
+	  content: "";
+	  display: flex;
+	  padding-bottom: 100%;
+	  max-height: 95%;
+	  max-width: 95%;
+	}
+	
+	/* Contains image in square div */
+	.content {
+	  position: absolute;
+	  max-width: 95%;
+	  max-height: 95%;
+	}
+
+	/* Creates border around image */
+	img {
+	  border-style: solid;
+	  border-width: medium;
+	  border-color: white;
+	}
+	
+	/* Makes image opaque when hovered over */
+	.imgtxt {
+      font-size: 2.5vh;
+}
+
+
+}
+
+/*.whiten {
+  position: relative;
+  display: inline-block;
+}
+
+.whiten .whitentext {
+  visibility: hidden;
+  font-family: cantarell;
+  width: 120px;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 0.3vh;
+  position: absolute;
+}
+
+
+.whiten:hover .whitentext {
+  visibility: visible;
+}
