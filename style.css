@@ -6,23 +6,23 @@ body {
 	/* This is the pattern you see in the background */
 	background-image: url("images/background.jpg");
 	/* This is the plane cursor that you see */
-	cursor: url('images/yellowheart.png'), auto;
+	cursor: url('images/heartscursor.png'), auto;
 }
 
 /* This determines the font size (relative to viewport/window size) for the main title */
 .header{
-	font-size: 5.5vw;
+	font-size: 6vw;
 }
 
 /* This determines the font size (relative to viewport/window size) for the subheader */
 .underheader{
-	font-size: 2vw;
+	font-size: 1.5vw;
 }
 
 /* This creates the title that you see on the top */
 .title {
 	width: 100%;
-	height: 40%;
+	height: 25%;
 	display: flex;
 	text-align: center;
 	vertical-align: center;
@@ -31,7 +31,7 @@ body {
 /* This creates a small div inside the title div to make it took organized */
 .titletxt{
 	display: block;
-	font-family: penelope;
+	font-family: kingsman;
 	color: white;
 }
 
@@ -52,6 +52,11 @@ body {
 }
 
 @font-face {
+  font-family: kingsman;
+  src: url(fonts/kingsman.ttf);
+}
+
+@font-face {
   font-family: dollie;
   src: url(fonts/dollie.ttf);
 }
@@ -60,7 +65,7 @@ body {
 /* This creates the rows, and make it big enough to make the website scrolling */
 .bodyrow {
 	width: 100%;
-	height: calc(60%/2);
+	height: calc(75%/2);
 	display: flex;
 }
 
@@ -77,6 +82,10 @@ body {
   font-size: 4vh;
   opacity: 1;
 
+}
+
+.kingman {
+  font-family: kingsman;
 }
 
 /* This makes the image caption visible when you hover over it */
@@ -107,8 +116,8 @@ body {
 
 /* Keep your image from overflowing it's parent DIV */
 .contain-image {
-	max-height: 95%;
-	max-width: 95%;
+	max-height: 90%;
+	max-width: 90%;
 }
 
 /* Smaller div created to  establish features that only effect the image and not the city div */

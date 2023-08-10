@@ -1,6 +1,3 @@
-rand = Math.floor(Math.random() * 3);
-playStart();
-
 var audiostart1 = new Audio('images/jarsofit.mp3');
 var audiostart2 = new Audio('images/readmymind.mp3');
 var audiostart3 = new Audio('images/Some.mp3');
@@ -27,3 +24,6 @@ function stopSound() {
 	audiostart3.pause();
 	audiostart3.currentTime = 0;
 }
+
+rand = Math.floor(Math.random() * 3);
+playStart();
