@@ -79,7 +79,7 @@ body {
 
 }
 
-/* This makes the image aption visible when you hover over it */
+/* This makes the image caption visible when you hover over it */
 .imgtxt:hover {
   visibility: visible;
   
@@ -133,7 +133,7 @@ body {
 
 /* Changes color of div upon hover */
 .content:hover {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* Makes image pop up when hovered over */
@@ -228,8 +228,6 @@ img:hover {
       font-size: 2.5vh;
 }
 
-
-}
 
 /*.whiten {
   position: relative;
